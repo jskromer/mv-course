@@ -103,7 +103,7 @@ function Landing({ onNav }) {
             IPMVP Companion Course
           </div>
           <h1 style={{ fontSize: 36, fontWeight: 700, color: C.white, margin: "0 0 16px", letterSpacing: -0.5, lineHeight: 1.2 }}>
-            Statistical Modeling for<br />IPMVP Implementation
+            Statistical Modeling for<br />IPMVP<a href="#terminology-note" style={{ color: C.teal, textDecoration: "none", fontSize: 18, verticalAlign: "super" }}>*</a> Implementation
           </h1>
           <p style={{ fontSize: 16, color: C.textSoft, lineHeight: 1.7, maxWidth: 600, margin: "0 auto" }}>
             Build the statistical intuition and practical skills to implement IPMVP Options A–D. From regression fundamentals through whole-facility and retrofit isolation approaches, aligned with EVO Core Concepts and ASHRAE Guideline 14.
@@ -461,8 +461,7 @@ function Landing({ onNav }) {
           </div>
         </div>
 
-        {/* IPMVP terminology disclaimer */}
-        <div style={{ marginTop: 24, padding: "20px 28px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8 }}>
+        <div id="terminology-note" style={{ marginTop: 24, padding: "20px 28px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8 }}>
           <div style={{ fontSize: 11, fontWeight: 600, color: C.textDim, textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 8 }}>
             A Note on Terminology
           </div>
