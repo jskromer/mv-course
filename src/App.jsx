@@ -460,6 +460,16 @@ function Landing({ onNav }) {
             Based on <em>The Role of the M&V Professional</em> by Steve Kromer (River Publishers, 2024)
           </div>
         </div>
+
+        {/* IPMVP terminology disclaimer */}
+        <div style={{ marginTop: 24, padding: "20px 28px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8 }}>
+          <div style={{ fontSize: 11, fontWeight: 600, color: C.textDim, textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 8 }}>
+            A Note on Terminology
+          </div>
+          <p style={{ fontSize: 12, color: C.textDim, lineHeight: 1.7, margin: 0 }}>
+            IPMVP terminology has evolved significantly since its inception as NEMVP in 1996. The Option definitions used in this course most closely align with the public domain versions of IPMVP published before the Efficiency Valuation Organization (EVO) placed the document under copyright. For a detailed accounting of how each Option definition has changed across every major revision — from the 1996 NEMVP through the 2022 Core Concepts — see Appendix II of <em>The Role of the Measurement and Verification Professional</em> (Kromer, River Publishers, 2024). The current EVO-copyrighted version of IPMVP may differ from the definitions presented here.
+          </p>
+        </div>
       </div>
     </div>
   );
