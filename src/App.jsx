@@ -453,7 +453,7 @@ function Landing({ onNav }) {
         {/* Companion link */}
         <div style={{ marginTop: 32, textAlign: "center", padding: "24px", borderTop: `1px solid ${C.border}` }}>
           <div style={{ fontSize: 12, color: C.textDim, marginBottom: 6 }}>Looking for the advanced course?</div>
-          <a href="https://c-fdesigns.vercel.app" style={{ fontSize: 14, color: C.teal, textDecoration: "none", fontWeight: 600 }}>
+          <a href="https://cfdesigns.vercel.app" style={{ fontSize: 14, color: C.teal, textDecoration: "none", fontWeight: 600 }}>
             Counterfactual Design for M&V →
           </a>
           <div style={{ fontSize: 11, color: C.textDim, marginTop: 6, fontStyle: "italic" }}>
