@@ -8,8 +8,9 @@ import SimulationExplainer from "./SimulationExplainer.jsx";
 import CaseStudies from "./CaseStudies.jsx";
 import BoundaryExplainer from "./BoundaryExplainer.jsx";
 import DurationExplainer from "./DurationExplainer.jsx";
+import ClassMap from "./ClassMap.jsx";
 
-const ROUTES = { "": "home", "#/fundamentals": "fundamentals", "#/workbench": "workbench", "#/architecture": "architecture", "#/pedagogy": "pedagogy", "#/beyond": "beyond", "#/simulation": "simulation", "#/cases": "cases", "#/boundary": "boundary", "#/duration": "duration" };
+const ROUTES = { "": "home", "#/fundamentals": "fundamentals", "#/workbench": "workbench", "#/architecture": "architecture", "#/pedagogy": "pedagogy", "#/beyond": "beyond", "#/simulation": "simulation", "#/cases": "cases", "#/boundary": "boundary", "#/duration": "duration", "#/roadmap": "roadmap" };
 const HASHES = Object.fromEntries(Object.entries(ROUTES).map(([k, v]) => [v, k]));
 
 function useHashRouter() {
@@ -51,6 +52,7 @@ export default function App() {
   if (page === "cases") return <CaseStudies onBack={() => setPage("home")} />;
   if (page === "boundary") return <BoundaryExplainer onBack={() => setPage("home")} />;
   if (page === "duration") return <DurationExplainer onBack={() => setPage("home")} />;
+  if (page === "roadmap") return <ClassMap onBack={() => setPage("home")} />;
 
   return <Landing onNav={setPage} />;
 }
@@ -111,6 +113,18 @@ function Landing({ onNav }) {
           <p style={{ fontSize: 13, color: C.textDim, lineHeight: 1.6, maxWidth: 520, margin: "0 auto" }}>
             Interactive modules aligned with IPMVP Options A–D, ASHRAE Guideline 14, and EVO Core Concepts.
           </p>
+          <div style={{ marginTop: 20 }}>
+            <button onClick={() => onNav("roadmap")} style={{
+              background: "none", border: `1px solid ${C.teal}`, borderRadius: 6,
+              padding: "8px 20px", fontSize: 13, color: C.teal, fontWeight: 600,
+              cursor: "pointer", fontFamily: "'IBM Plex Sans', sans-serif", transition: "all 0.2s",
+            }}
+              onMouseEnter={e => { e.currentTarget.style.background = C.teal; e.currentTarget.style.color = "#fff"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = C.teal; }}
+            >
+              📋 View Student Roadmap
+            </button>
+          </div>
         </div>
       </div>
 
