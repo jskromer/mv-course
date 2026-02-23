@@ -102,24 +102,20 @@ function Landing({ onNav }) {
           <div style={{ fontSize: 11, letterSpacing: 4, color: C.teal, fontWeight: 600, textTransform: "uppercase", marginBottom: 16 }}>
             IPMVP Companion Course
           </div>
-          <h1 style={{ fontSize: 36, fontWeight: 700, color: C.white, margin: "0 0 16px", letterSpacing: -0.5, lineHeight: 1.2 }}>
+          <h1 style={{ fontSize: 36, fontWeight: 700, color: C.white, margin: "0 0 20px", letterSpacing: -0.5, lineHeight: 1.2 }}>
             Statistical Modeling for<br />IPMVP<a href="#terminology-note" style={{ color: C.teal, textDecoration: "none", fontSize: 18, verticalAlign: "super" }}>*</a> Implementation
           </h1>
-          <p style={{ fontSize: 16, color: C.textSoft, lineHeight: 1.7, maxWidth: 600, margin: "0 auto" }}>
-            Build the statistical intuition and practical skills to implement IPMVP Options A–D. From regression fundamentals through whole-facility and retrofit isolation approaches, aligned with EVO Core Concepts and ASHRAE Guideline 14.
+          <p style={{ fontSize: 17, color: C.textSoft, lineHeight: 1.75, maxWidth: 580, margin: "0 auto 12px" }}>
+            You know <em style={{ fontStyle: "normal", fontWeight: 600, color: C.text }}>what</em> a regression model is supposed to do — but could you build one, validate it, and defend it in a project review? This course gets you there.
+          </p>
+          <p style={{ fontSize: 13, color: C.textDim, lineHeight: 1.6, maxWidth: 520, margin: "0 auto" }}>
+            Interactive modules aligned with IPMVP Options A–D, ASHRAE Guideline 14, and EVO Core Concepts.
           </p>
         </div>
       </div>
 
-      {/* Course path */}
+      {/* Two paths */}
       <div style={{ maxWidth: 900, margin: "0 auto", padding: "48px 32px" }}>
-        {/* Learning path connector */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
-          <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.teal }} />
-          <div style={{ flex: 1, height: 2, background: `linear-gradient(90deg, ${C.teal}, ${C.blue})` }} />
-          <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.blue }} />
-        </div>
-
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
           {/* Part 1 */}
           <div style={{
@@ -130,39 +126,22 @@ function Landing({ onNav }) {
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.teal; e.currentTarget.style.boxShadow = `0 4px 20px ${C.teal}15`; }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
           >
-            <div style={{ background: C.surfaceRaised, padding: "16px 24px", borderBottom: `1px solid ${C.border}` }}>
+            <div style={{ background: C.surfaceRaised, padding: "14px 24px", borderBottom: `1px solid ${C.border}` }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <span style={{ fontSize: 11, fontFamily: "'IBM Plex Mono', monospace", color: C.teal, fontWeight: 600 }}>PART 1</span>
                   <span style={{ background: C.greenDim, color: C.green, fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 3 }}>START HERE</span>
                 </div>
-                <span style={{ fontSize: 10, color: C.textDim }}>5 modules</span>
+                <span style={{ fontSize: 10, color: C.textDim }}>5 interactive modules</span>
               </div>
             </div>
             <div style={{ padding: "24px 24px 28px" }}>
               <h2 style={{ fontSize: 20, fontWeight: 700, color: C.white, margin: "0 0 10px" }}>Statistical Fundamentals</h2>
-              <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7, margin: "0 0 20px" }}>
-                Build intuition from the ground up. What does a scatter plot reveal that a time series doesn't? Why fit a line? What is a residual? How do you know if a model is good enough?
+              <p style={{ fontSize: 14, color: C.textSoft, lineHeight: 1.7, margin: "0 0 20px" }}>
+                Build intuition from the ground up. Scatter plots, linear regression, residuals, and goodness-of-fit metrics — all interactive, all visual.
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {[
-                  ["01", "Two Views of Data", "Time series vs. scatter — same data, different stories"],
-                  ["02", "Why Linear Models?", "Drag your own line, see errors update, discover OLS"],
-                  ["03", "What Is a Residual?", "Step-by-step error anatomy + heteroskedasticity patterns"],
-                  ["04", "Goodness of Fit", "R², RMSE, CV(RMSE), NMBE — what they mean and when they lie"],
-                  ["05", "CV(RMSE) Deep Dive", "Why the same model quality can produce different scores"],
-                ].map(([num, title, desc]) => (
-                  <div key={num} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: C.teal, fontWeight: 600, marginTop: 2, flexShrink: 0 }}>{num}</span>
-                    <div>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: C.text }}>{title}</div>
-                      <div style={{ fontSize: 11, color: C.textDim, marginTop: 1 }}>{desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
               <div style={{
-                marginTop: 24, background: C.teal, color: "#fff", border: "none",
+                background: C.teal, color: "#fff", border: "none",
                 borderRadius: 6, padding: "12px 0", textAlign: "center",
                 fontSize: 14, fontWeight: 600,
               }}>Begin with Fundamentals →</div>
@@ -178,39 +157,22 @@ function Landing({ onNav }) {
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.blue; e.currentTarget.style.boxShadow = `0 4px 20px ${C.blue}15`; }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
           >
-            <div style={{ background: C.surfaceRaised, padding: "16px 24px", borderBottom: `1px solid ${C.border}` }}>
+            <div style={{ background: C.surfaceRaised, padding: "14px 24px", borderBottom: `1px solid ${C.border}` }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <span style={{ fontSize: 11, fontFamily: "'IBM Plex Mono', monospace", color: C.blue, fontWeight: 600 }}>PART 2</span>
                   <span style={{ background: C.blueDim, color: C.blue, fontSize: 10, fontWeight: 600, padding: "2px 8px", borderRadius: 3 }}>APPLIED</span>
                 </div>
-                <span style={{ fontSize: 10, color: C.textDim }}>5 steps</span>
+                <span style={{ fontSize: 10, color: C.textDim }}>5 guided steps</span>
               </div>
             </div>
             <div style={{ padding: "24px 24px 28px" }}>
               <h2 style={{ fontSize: 20, fontWeight: 700, color: C.white, margin: "0 0 10px" }}>M&V Modeling Workbench</h2>
-              <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7, margin: "0 0 20px" }}>
-                Apply what you learned. Choose a building, explore its data, fit change-point regression models, validate against ASHRAE Guideline 14, and calculate savings with uncertainty.
+              <p style={{ fontSize: 14, color: C.textSoft, lineHeight: 1.7, margin: "0 0 20px" }}>
+                Apply what you learned. Choose a building, fit change-point models, validate against ASHRAE Guideline 14, and calculate savings with uncertainty.
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {[
-                  ["01", "Scenario", "Choose a building and understand the counterfactual design"],
-                  ["02", "Explore", "Read the scatter plot to identify the right model form"],
-                  ["03", "Counterfactual", "Select and fit a change-point regression model"],
-                  ["04", "Validate", "Test against Guideline 14 thresholds + residual diagnostics"],
-                  ["05", "Savings", "Project the counterfactual and quantify uncertainty"],
-                ].map(([num, title, desc]) => (
-                  <div key={num} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: C.blue, fontWeight: 600, marginTop: 2, flexShrink: 0 }}>{num}</span>
-                    <div>
-                      <div style={{ fontSize: 13, fontWeight: 600, color: C.text }}>{title}</div>
-                      <div style={{ fontSize: 11, color: C.textDim, marginTop: 1 }}>{desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
               <div style={{
-                marginTop: 24, background: C.blue, color: "#fff", border: "none",
+                background: C.blue, color: "#fff", border: "none",
                 borderRadius: 6, padding: "12px 0", textAlign: "center",
                 fontSize: 14, fontWeight: 600,
               }}>Open the Workbench →</div>
@@ -218,208 +180,44 @@ function Landing({ onNav }) {
           </div>
         </div>
 
-        {/* Explainers */}
-        <div style={{ marginTop: 40 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.amber }} />
-            <div style={{ flex: 1, height: 2, background: `linear-gradient(90deg, ${C.amber}, ${C.orange})` }} />
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.orange }} />
-          </div>
-          <div style={{ fontSize: 11, letterSpacing: 3, color: C.amber, fontWeight: 600, textTransform: "uppercase", marginBottom: 12, fontFamily: "'IBM Plex Mono', monospace" }}>Explainers</div>
-
-          {/* Boundary — full width, Dimension 1 */}
-          <div style={{
-            background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-            padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s", marginBottom: 16,
-          }}
-            onClick={() => onNav("boundary")}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#be185d"; e.currentTarget.style.boxShadow = "0 4px 20px #be185d15"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-          >
-            <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: "3px solid #be185d", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-              <div>
-                <div style={{ fontSize: 10, letterSpacing: 2, color: "#be185d", fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Dimension 1 · Counterfactual Design</div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>The Measurement Boundary</h3>
-              </div>
-              <div style={{ fontSize: 10, background: "#be185d20", color: "#be185d", padding: "4px 10px", borderRadius: 4, fontWeight: 700, fontFamily: "'IBM Plex Mono'", whiteSpace: "nowrap", marginTop: 4 }}>NEW</div>
-            </div>
-            <div style={{ padding: "14px 24px 18px" }}>
-              <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                Whole facility or retrofit isolation? Where you draw the line determines what the model sees — and what it hides. Interactive building diagram, IPMVP Options A–D, and the tradeoff between clean signals and total savings.
-              </p>
-              <div style={{ display: "flex", gap: 6, marginTop: 12, flexWrap: "wrap" }}>
-                {["Whole Facility", "Retrofit Isolation", "Options A–D", "Interactive Effects", "Single-Line Diagrams"].map(t => (
-                  <span key={t} style={{ fontSize: 9, background: "#be185d15", color: "#be185d", padding: "2px 7px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Duration — full width, Dimension 3 */}
-          <div style={{
-            background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-            padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s", marginBottom: 16,
-          }}
-            onClick={() => onNav("duration")}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.teal; e.currentTarget.style.boxShadow = `0 4px 20px ${C.teal}15`; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-          >
-            <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: `3px solid ${C.teal}`, display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-              <div>
-                <div style={{ fontSize: 10, letterSpacing: 2, color: C.teal, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Dimension 3 · Counterfactual Design</div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>Duration: Which Past Predicts the Future?</h3>
-              </div>
-              <div style={{ fontSize: 10, background: `${C.teal}20`, color: C.teal, padding: "4px 10px", borderRadius: 4, fontWeight: 700, fontFamily: "'IBM Plex Mono'", whiteSpace: "nowrap", marginTop: 4 }}>NEW</div>
-            </div>
-            <div style={{ padding: "14px 24px 18px" }}>
-              <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                The most recent 12 months isn't always the right baseline. An interactive example shows how choosing a period with 61% occupancy vs. 88% occupancy flips savings from −23% to +10% — same building, same retrofit, opposite conclusion.
-              </p>
-              <div style={{ display: "flex", gap: 6, marginTop: 12, flexWrap: "wrap" }}>
-                {["Baseline Selection", "Occupancy Trap", "Coverage vs Relevance", "Routine Adjustments", "NRAs"].map(t => (
-                  <span key={t} style={{ fontSize: 9, background: `${C.teal}15`, color: C.teal, padding: "2px 7px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-            <div style={{
-              background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-              padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s",
-            }}
-              onClick={() => onNav("architecture")}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.amber; e.currentTarget.style.boxShadow = `0 4px 20px ${C.amber}15`; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-            >
-              <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: `3px solid ${C.amber}` }}>
-                <div style={{ fontSize: 10, letterSpacing: 2, color: C.amber, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Explainer</div>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>The Architecture of Uncertainty</h3>
-              </div>
-              <div style={{ padding: "14px 20px 18px" }}>
-                <p style={{ fontSize: 12, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                  What we know, what we don't, and what ain't so. Rumsfeld's matrix completed by Twain and Sinclair.
-                </p>
-                <div style={{ display: "flex", gap: 6, marginTop: 12, flexWrap: "wrap" }}>
-                  {["Epistemology", "Ontology", "False Certainties"].map(t => (
-                    <span key={t} style={{ fontSize: 9, background: C.amberDim, color: C.amber, padding: "2px 7px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
+        {/* Go Deeper — compact 3x2 grid */}
+        <div style={{ marginTop: 48 }}>
+          <div style={{ fontSize: 11, letterSpacing: 3, color: C.textDim, fontWeight: 600, textTransform: "uppercase", marginBottom: 16, fontFamily: "'IBM Plex Mono', monospace" }}>Go Deeper</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+            {[
+              { key: "boundary", title: "Measurement Boundary", desc: "Where you draw the line determines what the model sees — and what it hides.", color: "#be185d", tags: ["Whole Facility", "Retrofit Isolation", "Options A–D"] },
+              { key: "duration", title: "Duration", desc: "Which past predicts the future? How baseline period selection changes everything.", color: C.teal, tags: ["Baseline Selection", "Occupancy Trap", "Coverage vs Relevance"] },
+              { key: "cases", title: "Non-Routine Adjustments", desc: "Two case studies: a server room appears mid-reporting, a chiller fails during baseline.", color: C.orange, tags: ["Monthly Models", "Reporting Period NRA", "Baseline NRA"] },
+              { key: "beyond", title: "Beyond One Variable", desc: "Step through adding causal variables — from R²=0.02 to R²=0.99 with real hourly data.", color: C.blue, tags: ["TOWT", "Multi-Variable", "Causality"] },
+              { key: "architecture", title: "Architecture of Uncertainty", desc: "What we know, what we don't, and what ain't so. Epistemic vs. aleatory vs. ontological.", color: C.amber, tags: ["Epistemology", "False Certainties"] },
+              { key: "simulation", title: "Simulation as Physical Model", desc: "When statistical models reach their limits, physics-based simulation picks up the thread.", color: "#7c5cbf", tags: ["EnergyPlus", "Bayesian Calibration"] },
+            ].map(item => (
+              <div key={item.key} onClick={() => onNav(item.key)} style={{
+                background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8,
+                padding: "18px 18px 16px", cursor: "pointer", transition: "all 0.2s",
+                borderTop: `3px solid ${item.color}`,
+              }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = item.color; e.currentTarget.style.boxShadow = `0 3px 16px ${item.color}12`; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.borderTopColor = item.color; e.currentTarget.style.boxShadow = "none"; }}
+              >
+                <div style={{ fontSize: 14, fontWeight: 700, color: C.white, marginBottom: 6, lineHeight: 1.3 }}>{item.title}</div>
+                <p style={{ fontSize: 12, color: C.textSoft, lineHeight: 1.6, margin: "0 0 10px" }}>{item.desc}</p>
+                <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
+                  {item.tags.map(t => (
+                    <span key={t} style={{ fontSize: 9, background: `${item.color}12`, color: item.color, padding: "2px 6px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
                   ))}
                 </div>
               </div>
-            </div>
-
-            <div style={{
-              background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-              padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s",
-            }}
-              onClick={() => onNav("pedagogy")}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.teal; e.currentTarget.style.boxShadow = `0 4px 20px ${C.teal}15`; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-            >
-              <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: `3px solid ${C.teal}` }}>
-                <div style={{ fontSize: 10, letterSpacing: 2, color: C.teal, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Pedagogy Framework</div>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>The Uncertainty Guide</h3>
-              </div>
-              <div style={{ padding: "14px 20px 18px" }}>
-                <p style={{ fontSize: 12, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                  A 6-layer pedagogy for M&V uncertainty: from epistemic/aleatory/ontological types to counterfactual design.
-                </p>
-                <div style={{ display: "flex", gap: 6, marginTop: 12, flexWrap: "wrap" }}>
-                  {["Three Uncertainties", "Entropy", "Counterfactual Design"].map(t => (
-                    <span key={t} style={{ fontSize: 9, background: `${C.teal}15`, color: C.teal, padding: "2px 7px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div style={{
-              background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-              padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s",
-            }}
-              onClick={() => onNav("beyond")}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.blue; e.currentTarget.style.boxShadow = `0 4px 20px ${C.blue}15`; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-            >
-              <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: `3px solid ${C.blue}` }}>
-                <div style={{ fontSize: 10, letterSpacing: 2, color: C.blue, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Interactive Example</div>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>Beyond One Variable</h3>
-              </div>
-              <div style={{ padding: "14px 20px 18px" }}>
-                <p style={{ fontSize: 12, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                  Step through adding causal variables — from R²=0.02 to R²=0.99. Real hourly data, 8,760 observations.
-                </p>
-                <div style={{ display: "flex", gap: 6, marginTop: 12, flexWrap: "wrap" }}>
-                  {["TOWT", "Causality", "Multi-Variable", "Physical Models"].map(t => (
-                    <span key={t} style={{ fontSize: 9, background: `${C.blue}15`, color: C.blue, padding: "2px 7px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div style={{
-              background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-              padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s",
-            }}
-              onClick={() => onNav("simulation")}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.violet; e.currentTarget.style.boxShadow = `0 4px 20px ${C.violet}15`; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-            >
-              <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: `3px solid ${C.violet}` }}>
-                <div style={{ fontSize: 10, letterSpacing: 2, color: C.violet, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Explainer</div>
-                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>Simulation as Physical Model</h3>
-              </div>
-              <div style={{ padding: "14px 20px 18px" }}>
-                <p style={{ fontSize: 12, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                  When statistical models reach their limits, physics-based simulation and Bayesian calibration pick up the thread.
-                </p>
-                <div style={{ display: "flex", gap: 6, marginTop: 12, flexWrap: "wrap" }}>
-                  {["EnergyPlus", "Bayesian Calibration", "Simulation", "Uncertainty"].map(t => (
-                    <span key={t} style={{ fontSize: 9, background: `${C.violet}15`, color: C.violet, padding: "2px 7px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Case Studies */}
-        <div style={{ marginTop: 32 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.orange }} />
-            <div style={{ flex: 1, height: 2, background: `linear-gradient(90deg, ${C.orange}, ${C.red})` }} />
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.red }} />
-          </div>
-          <div style={{ fontSize: 11, letterSpacing: 3, color: C.orange, fontWeight: 600, textTransform: "uppercase", marginBottom: 12, fontFamily: "'IBM Plex Mono', monospace" }}>Case Studies</div>
-          <div onClick={() => onNav("cases")} style={{
-            background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10,
-            padding: 0, overflow: "hidden", cursor: "pointer", transition: "all 0.2s",
-          }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.orange; e.currentTarget.style.boxShadow = `0 4px 20px ${C.orange}15`; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
-          >
-            <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "20px 24px", borderBottom: `3px solid ${C.orange}` }}>
-              <div style={{ fontSize: 10, letterSpacing: 2, color: C.orange, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Interactive Case Studies</div>
-              <h3 style={{ fontSize: 18, fontWeight: 700, color: "#fff", margin: "8px 0 0", lineHeight: 1.3 }}>Non-Routine Adjustments</h3>
-            </div>
-            <div style={{ padding: "16px 24px 20px" }}>
-              <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-                Two monthly-model case studies: a server room that appears mid-reporting period, and a chiller failure that contaminates the baseline. Toggle adjustments on and off to see how they change savings.
-              </p>
-              <div style={{ display: "flex", gap: 8, marginTop: 14, flexWrap: "wrap" }}>
-                {["Monthly Models", "Reporting Period NRA", "Baseline NRA", "False Certainties"].map(t => (
-                  <span key={t} style={{ fontSize: 10, background: `${C.orange}15`, color: C.orange, padding: "3px 8px", borderRadius: 3, fontWeight: 600 }}>{t}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Pedagogical framing */}
+        {/* Three Dimensions framework */}
         <div style={{ marginTop: 40, background: C.amberDim, border: `1px solid ${C.amber}40`, borderRadius: 8, padding: "20px 28px" }}>
           <div style={{ fontSize: 11, fontWeight: 600, color: C.amber, textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 8 }}>Framework</div>
           <h3 style={{ fontSize: 16, fontWeight: 700, color: C.white, margin: "0 0 10px" }}>Counterfactual Design — Three Dimensions</h3>
           <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7 }}>
-            Every M&V analysis requires three decisions that define how you construct the counterfactual.
+            Every M&V analysis requires three decisions that define how you construct the counterfactual. These dimensions translate — and sharpen — the historic IPMVP Options A–D classification.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginTop: 16 }}>
             {[
@@ -442,26 +240,37 @@ function Landing({ onNav }) {
           </div>
         </div>
 
-        {/* Who this is for */}
-        <div style={{ marginTop: 32, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, padding: "20px 28px" }}>
-          <h3 style={{ fontSize: 14, fontWeight: 700, color: C.white, margin: "0 0 8px" }}>Who is this for?</h3>
-          <p style={{ fontSize: 13, color: C.textSoft, lineHeight: 1.7, margin: 0 }}>
-            M&V professionals who have framework knowledge (IPMVP, CMVP certification) but need to build practical confidence with the statistics. If you know <em>what</em> a regression model is supposed to do but aren't sure you could build, validate, and defend one in a project review — this is for you.
-          </p>
+        {/* Companion courses */}
+        <div style={{ marginTop: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+          <a href="https://cfdesigns.vercel.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, padding: "18px 22px", cursor: "pointer", transition: "border-color 0.2s" }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = C.teal}
+              onMouseLeave={e => e.currentTarget.style.borderColor = C.border}>
+              <div style={{ fontSize: 10, color: C.teal, fontWeight: 600, letterSpacing: 2, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>Companion</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: C.white }}>Counterfactual Designs Course</div>
+              <div style={{ fontSize: 12, color: C.textSoft, marginTop: 4 }}>The three-dimension framework: Boundary, Model Form, Duration</div>
+            </div>
+          </a>
+          <a href="https://bayesian-mv.vercel.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, padding: "18px 22px", cursor: "pointer", transition: "border-color 0.2s" }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = C.blue}
+              onMouseLeave={e => e.currentTarget.style.borderColor = C.border}>
+              <div style={{ fontSize: 10, color: C.blue, fontWeight: 600, letterSpacing: 2, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>Companion</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: C.white }}>Bayesian M&V Module</div>
+              <div style={{ fontSize: 12, color: C.textSoft, marginTop: 4 }}>Same data, same models, different inference — posterior distributions instead of point estimates</div>
+            </div>
+          </a>
         </div>
 
-        {/* Companion link */}
-        <div style={{ marginTop: 32, textAlign: "center", padding: "24px", borderTop: `1px solid ${C.border}` }}>
-          <div style={{ fontSize: 12, color: C.textDim, marginBottom: 6 }}>Looking for the advanced course?</div>
-          <a href="https://cfdesigns.vercel.app" style={{ fontSize: 14, color: C.teal, textDecoration: "none", fontWeight: 600 }}>
-            Counterfactual Design for M&V →
-          </a>
-          <div style={{ fontSize: 11, color: C.textDim, marginTop: 6, fontStyle: "italic" }}>
+        {/* Attribution */}
+        <div style={{ marginTop: 24, textAlign: "center", padding: "16px" }}>
+          <div style={{ fontSize: 11, color: C.textDim, fontStyle: "italic" }}>
             Based on <em>The Role of the M&V Professional</em> by Steve Kromer (River Publishers, 2024)
           </div>
         </div>
 
-        <div id="terminology-note" style={{ marginTop: 24, padding: "20px 28px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8 }}>
+        {/* Terminology note */}
+        <div id="terminology-note" style={{ marginTop: 8, padding: "20px 28px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8 }}>
           <div style={{ fontSize: 11, fontWeight: 600, color: C.textDim, textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 8 }}>
             A Note on Terminology
           </div>
