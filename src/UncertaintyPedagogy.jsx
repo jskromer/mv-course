@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", borderHover: "#b0b8c8",
-  text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7", white: "#111827",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", borderHover: "#b5a99a",
+  text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e", white: "#1a1612",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
   red: "#dc2626", redDim: "#fef2f2",
-  amber: "#b45309", amberDim: "#fef3c7",
-  orange: "#ea580c", teal: "#0d9488",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
+  orange: "#ea580c", teal: "#b5632e",
   violet: "#7c3aed", violetDim: "#ede9fe",
   indigo: "#4f46e5", indigoDim: "#e0e7ff",
 };
@@ -217,7 +217,7 @@ function LayerCard({ layer, expanded, onToggle }) {
           )}
 
           {/* Key message */}
-          <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 6, padding: "14px 18px", marginTop: 16 }}>
+          <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 6, padding: "14px 18px", marginTop: 16 }}>
             <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 14, fontWeight: 600, color: "#fff", lineHeight: 1.6, fontStyle: "italic" }}>"{layer.keyMessage}"</div>
           </div>
         </div>
@@ -234,12 +234,12 @@ export default function UncertaintyPedagogy({ onBack }) {
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero */}
-      <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.teal}` }}>
+      <div style={{ background: "linear-gradient(135deg, #3d3529 0%, #3d3529 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.teal}` }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
-          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#8494a7", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
+          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#998d7e", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
           <div style={{ fontSize: 10, letterSpacing: 4, color: C.teal, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Pedagogy Framework</div>
           <h1 style={{ fontFamily: "'IBM Plex Sans'", fontSize: 32, fontWeight: 700, color: "#fff", margin: "10px 0 0", lineHeight: 1.25 }}>The Uncertainty Guide</h1>
-          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#8494a7", margin: "12px 0 0", lineHeight: 1.7 }}>A 6-layer pedagogy for M&V and counterfactual design.</p>
+          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#998d7e", margin: "12px 0 0", lineHeight: 1.7 }}>A 6-layer pedagogy for M&V and counterfactual design.</p>
         </div>
       </div>
 
@@ -292,7 +292,7 @@ export default function UncertaintyPedagogy({ onBack }) {
         </div>
 
         {/* Transformation */}
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 8, padding: "28px 28px", margin: "24px 0 0", color: "#fff" }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 8, padding: "28px 28px", margin: "24px 0 0", color: "#fff" }}>
           <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 11, fontWeight: 700, letterSpacing: 2, color: C.teal, textTransform: "uppercase", marginBottom: 12 }}>The Transformation</div>
           <P style={{ color: "#94a3b8", marginTop: 0 }}>This pedagogy helps students become:</P>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 14 }}>

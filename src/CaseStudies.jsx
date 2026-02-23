@@ -2,13 +2,13 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import { CS1_BASELINE, CS1_REPORTING, CS2_BASELINE, CS2_REPORTING, HEAT_BP, COOL_BP } from "./caseStudyData.js";
 
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7", white: "#111827",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e", white: "#1a1612",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
   red: "#dc2626", redDim: "#fef2f2",
-  amber: "#b45309", amberDim: "#fef3c7",
-  teal: "#0d9488", violet: "#7c3aed", orange: "#ea580c",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
+  teal: "#b5632e", violet: "#7c3aed", orange: "#ea580c",
 };
 
 function P({ children, style }) {
@@ -346,7 +346,7 @@ function SavingsTable({ data, applyNRA, label }) {
       {label && <div style={{ padding: "8px 14px", fontFamily: "'IBM Plex Sans'", fontSize: 11, fontWeight: 700, color: C.textDim, background: C.surfaceRaised, borderBottom: `1px solid ${C.border}` }}>{label}</div>}
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
-          <tr style={{ background: "#1a2332", color: "#fff", fontSize: 10 }}>
+          <tr style={{ background: "#3d3529", color: "#fff", fontSize: 10 }}>
             <th style={{ padding: "6px 10px", textAlign: "left" }}>Month</th>
             <th style={{ padding: "6px 10px", textAlign: "right" }}>Actual</th>
             {applyNRA && <th style={{ padding: "6px 10px", textAlign: "right", color: C.orange }}>NRA</th>}
@@ -366,7 +366,7 @@ function SavingsTable({ data, applyNRA, label }) {
               <td style={{ padding: "5px 10px", textAlign: "right", color: r.savings > 0 ? C.green : C.red, fontWeight: 600 }}>{r.savings.toLocaleString()}</td>
             </tr>
           ))}
-          <tr style={{ background: "#1a2332", color: "#fff", fontWeight: 700 }}>
+          <tr style={{ background: "#3d3529", color: "#fff", fontWeight: 700 }}>
             <td style={{ padding: "6px 10px" }}>Total</td>
             <td style={{ padding: "6px 10px", textAlign: "right" }}>{totalActual.toLocaleString()}</td>
             {applyNRA && <td style={{ padding: "6px 10px", textAlign: "right", color: C.orange }}>{totalNRA > 0 ? `-${totalNRA.toLocaleString()}` : "—"}</td>}
@@ -405,12 +405,12 @@ export default function CaseStudies({ onBack }) {
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero */}
-      <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.orange}` }}>
+      <div style={{ background: "linear-gradient(135deg, #3d3529 0%, #3d3529 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.orange}` }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#8494a7", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
+          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#998d7e", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
           <div style={{ fontSize: 10, letterSpacing: 4, color: C.orange, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Case Studies</div>
           <h1 style={{ fontFamily: "'IBM Plex Sans'", fontSize: 30, fontWeight: 700, color: "#fff", margin: "10px 0 0", lineHeight: 1.25 }}>Non-Routine Adjustments</h1>
-          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#8494a7", margin: "10px 0 0", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#998d7e", margin: "10px 0 0", lineHeight: 1.7 }}>
             When the world doesn't hold still for your model — adjustments in the reporting period and the baseline.
           </p>
         </div>
@@ -593,7 +593,7 @@ export default function CaseStudies({ onBack }) {
         )}
 
         {/* The Big Idea */}
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginTop: 32 }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginTop: 32 }}>
           <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 11, fontWeight: 700, letterSpacing: 2, color: C.orange, textTransform: "uppercase", marginBottom: 12 }}>The Big Idea</div>
           <P style={{ fontSize: 15, color: "#e2e8f0", margin: "0 0 12px" }}>
             <strong style={{ color: "#fff" }}>Non-routine adjustments are not optional corrections — they are epistemic obligations.</strong> Every M&V analysis assumes that the baseline model represents normal operation and that the reporting period captures the effect of the retrofit and nothing else. When those assumptions break, the model doesn't warn you. It just gives you the wrong answer with full confidence.

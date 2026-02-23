@@ -1,12 +1,12 @@
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", borderHover: "#b0b8c8",
-  text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7", white: "#111827",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", borderHover: "#b5a99a",
+  text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e", white: "#1a1612",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
   red: "#dc2626", redDim: "#fef2f2",
-  amber: "#b45309", amberDim: "#fef3c7",
-  orange: "#ea580c", teal: "#0d9488",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
+  orange: "#ea580c", teal: "#b5632e",
   violet: "#7c3aed", violetDim: "#ede9fe",
 };
 
@@ -65,12 +65,12 @@ export default function ArchitectureOfUncertainty({ onBack }) {
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero */}
-      <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.amber}` }}>
+      <div style={{ background: "linear-gradient(135deg, #3d3529 0%, #3d3529 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.amber}` }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
-          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#8494a7", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
+          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#998d7e", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
           <div style={{ fontSize: 10, letterSpacing: 4, color: C.amber, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Explainer</div>
           <h1 style={{ fontFamily: "'IBM Plex Sans'", fontSize: 32, fontWeight: 700, color: "#fff", margin: "10px 0 0", lineHeight: 1.25 }}>The Architecture of Uncertainty</h1>
-          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#8494a7", margin: "12px 0 0", lineHeight: 1.7 }}>What we know, what we don't, and what ain't so.</p>
+          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#998d7e", margin: "12px 0 0", lineHeight: 1.7 }}>What we know, what we don't, and what ain't so.</p>
         </div>
       </div>
 
@@ -87,7 +87,7 @@ export default function ArchitectureOfUncertainty({ onBack }) {
 
         <div style={{ margin: "16px 0", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 6, overflow: "hidden" }}>
           <a href="https://www.c-span.org/clip/news-conference/donald-rumsfeld-there-are-known-unknowns/5087522" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 18px", textDecoration: "none", color: C.text }}>
-            <div style={{ width: 40, height: 40, borderRadius: 6, background: "#1a2332", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <div style={{ width: 40, height: 40, borderRadius: 6, background: "#3d3529", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
               <div style={{ width: 0, height: 0, borderTop: "8px solid transparent", borderBottom: "8px solid transparent", borderLeft: "14px solid #fff", marginLeft: 3 }} />
             </div>
             <div>
@@ -219,7 +219,7 @@ export default function ArchitectureOfUncertainty({ onBack }) {
 
         <P>To which Sinclair might add: <em>especially when you're being paid to be fooled.</em></P>
 
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 8, padding: "24px 28px", margin: "32px 0 0", color: "#fff" }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 8, padding: "24px 28px", margin: "32px 0 0", color: "#fff" }}>
           <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, fontWeight: 600, lineHeight: 1.7 }}>
             The architecture of uncertainty isn't a confession of weakness. It's the foundation of rigor. And in a world of motivated reasoning, it's an act of resistance.
           </div>

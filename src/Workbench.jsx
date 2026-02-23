@@ -61,8 +61,8 @@ function SVGScatter({ data, xKey, yKey, xLabel, yLabel, width: containerWidth, h
       {/* Change point reference lines */}
       {changePoints?.heating != null && (
         <>
-          <line x1={scaleX(changePoints.heating)} x2={scaleX(changePoints.heating)} y1={pad.top} y2={pad.top + h} stroke="#b45309" strokeDasharray="6 3" strokeWidth={1.5} />
-          <text x={scaleX(changePoints.heating) + 4} y={pad.top + 14} fill="#b45309" fontSize={10} fontFamily="'IBM Plex Sans', sans-serif">CP_h {changePoints.heating.toFixed(0)}°F</text>
+          <line x1={scaleX(changePoints.heating)} x2={scaleX(changePoints.heating)} y1={pad.top} y2={pad.top + h} stroke="#a67c28" strokeDasharray="6 3" strokeWidth={1.5} />
+          <text x={scaleX(changePoints.heating) + 4} y={pad.top + 14} fill="#a67c28" fontSize={10} fontFamily="'IBM Plex Sans', sans-serif">CP_h {changePoints.heating.toFixed(0)}°F</text>
         </>
       )}
       {changePoints?.cooling != null && (
@@ -86,7 +86,7 @@ function SVGScatter({ data, xKey, yKey, xLabel, yLabel, width: containerWidth, h
         const cy = scaleY(d[yKey]);
         const fill = residualMode ? (d[yKey] > 0 ? "#4da6ff" : "#b18cfe") : "#4da6ff";
         return (
-          <circle key={i} cx={cx} cy={cy} r={hovered?.i === i ? 7 : 5} fill={fill} fillOpacity={0.85} stroke={hovered?.i === i ? "#1a2332" : "#bfdbfe"} strokeWidth={hovered?.i === i ? 2 : 1} style={{ transition: "r 0.1s, stroke 0.1s" }} />
+          <circle key={i} cx={cx} cy={cy} r={hovered?.i === i ? 7 : 5} fill={fill} fillOpacity={0.85} stroke={hovered?.i === i ? "#3d3529" : "#bfdbfe"} strokeWidth={hovered?.i === i ? 2 : 1} style={{ transition: "r 0.1s, stroke 0.1s" }} />
         );
       })}
 
@@ -117,7 +117,7 @@ function SVGScatter({ data, xKey, yKey, xLabel, yLabel, width: containerWidth, h
       {hovered && (
         <g>
           <rect x={hovered.cx + 12} y={hovered.cy - 36} width={180} height={hovered.month ? 48 : 36} rx={4} fill="#ffffff" stroke="#e2e8f0" />
-          {hovered.month && <text x={hovered.cx + 20} y={hovered.cy - 18} fill="#1a2332" fontSize={12} fontWeight={600} fontFamily="'IBM Plex Sans', sans-serif">{hovered.month}</text>}
+          {hovered.month && <text x={hovered.cx + 20} y={hovered.cy - 18} fill="#3d3529" fontSize={12} fontWeight={600} fontFamily="'IBM Plex Sans', sans-serif">{hovered.month}</text>}
           <text x={hovered.cx + 20} y={hovered.cy + (hovered.month ? 0 : -16)} fill="#64748b" fontSize={11}>
             {hovered[xKey]?.toFixed?.(1) || hovered[xKey]}°F → {residualMode ? hovered[yKey]?.toFixed(0) : hovered[yKey]?.toLocaleString()} {unit || ""}
           </text>
@@ -407,14 +407,14 @@ const G14 = { cvRMSE: 15, NMBE: 5 };
 
 // ─── COLORS ──────────────────────────────────────────────────────
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", borderHover: "#b0b8c8",
-  text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7", white: "#111827",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", borderHover: "#b5a99a",
+  text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e", white: "#1a1612",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
   red: "#dc2626", redDim: "#fee2e2",
-  amber: "#b45309", amberDim: "#fef3c7",
-  orange: "#ea580c", violet: "#7c3aed", teal: "#0d9488",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
+  orange: "#ea580c", violet: "#7c3aed", teal: "#b5632e",
 };
 
 // ─── MAIN APP ────────────────────────────────────────────────────
@@ -915,7 +915,7 @@ function ChartLegend({ items }) {
 }
 
 function Btn({ onClick, children, disabled }) {
-  return <button onClick={onClick} disabled={disabled} style={{ background: disabled ? C.surfaceRaised : `linear-gradient(135deg, ${C.blue}, #2563eb)`, border: "none", borderRadius: 5, padding: "10px 22px", color: disabled ? C.textDim : "#fff", fontSize: 13, fontWeight: 600, fontFamily: "'IBM Plex Sans'", cursor: disabled ? "not-allowed" : "pointer" }}>{children}</button>;
+  return <button onClick={onClick} disabled={disabled} style={{ background: disabled ? C.surfaceRaised : `linear-gradient(135deg, ${C.blue}, #2c6fad)`, border: "none", borderRadius: 5, padding: "10px 22px", color: disabled ? C.textDim : "#fff", fontSize: 13, fontWeight: 600, fontFamily: "'IBM Plex Sans'", cursor: disabled ? "not-allowed" : "pointer" }}>{children}</button>;
 }
 function BtnSecondary({ onClick, children }) {
   return <button onClick={onClick} style={{ background: "transparent", border: `1px solid ${C.border}`, borderRadius: 5, padding: "10px 18px", color: C.textSoft, fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer" }}>{children}</button>;

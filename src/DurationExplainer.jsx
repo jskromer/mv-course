@@ -2,13 +2,13 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import { YEAR_2022, YEAR_2023, YEAR_2024, HEAT_BP, COOL_BP } from "./durationData.js";
 
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7",
-  teal: "#0d9488", tealDim: "#ccfbf1",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e",
+  teal: "#b5632e", tealDim: "#ccfbf1",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
   red: "#dc2626", redDim: "#fef2f2",
-  amber: "#b45309", amberDim: "#fef3c7",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
   violet: "#7c3aed", orange: "#ea580c", rose: "#be185d",
 };
 
@@ -318,12 +318,12 @@ export default function DurationExplainer({ onBack }) {
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero */}
-      <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.teal}` }}>
+      <div style={{ background: "linear-gradient(135deg, #3d3529 0%, #3d3529 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.teal}` }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#8494a7", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
+          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#998d7e", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
           <div style={{ fontSize: 10, letterSpacing: 4, color: C.teal, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Counterfactual Design · Dimension 3</div>
           <h1 style={{ fontFamily: "'IBM Plex Sans'", fontSize: 30, fontWeight: 700, color: "#fff", margin: "10px 0 0", lineHeight: 1.25 }}>Duration: Which Past Predicts the Future?</h1>
-          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#8494a7", margin: "10px 0 0", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#998d7e", margin: "10px 0 0", lineHeight: 1.7 }}>
             The baseline period isn't "the most recent 12 months." It's the slice of history most relevant to the future you're trying to predict.
           </p>
         </div>
@@ -504,7 +504,7 @@ export default function DurationExplainer({ onBack }) {
         </div>
 
         {/* The Big Idea */}
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginTop: 32 }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginTop: 32 }}>
           <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 11, fontWeight: 700, letterSpacing: 2, color: C.teal, textTransform: "uppercase", marginBottom: 12 }}>The Big Idea</div>
           <P style={{ fontSize: 15, color: "#e2e8f0", margin: "0 0 12px" }}>
             <strong style={{ color: "#fff" }}>Duration is not a number — it's a judgment about which past best represents the future.</strong> The conventional rule ("use the most recent 12 months") is a heuristic, not a principle. The principle is: choose the baseline period whose operating conditions are most relevant to the conditions the building will operate under during the reporting period.

@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7", white: "#111827",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e", white: "#1a1612",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
   red: "#dc2626", redDim: "#fef2f2",
-  amber: "#b45309", amberDim: "#fef3c7",
-  teal: "#0d9488", violet: "#7c3aed", orange: "#ea580c",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
+  teal: "#b5632e", violet: "#7c3aed", orange: "#ea580c",
   indigo: "#4f46e5",
 };
 
@@ -86,7 +86,7 @@ function ComparisonTable() {
     <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, overflow: "hidden", marginBottom: 20 }}>
       <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'IBM Plex Sans'", fontSize: 12 }}>
         <thead>
-          <tr style={{ background: "#1a2332" }}>
+          <tr style={{ background: "#3d3529" }}>
             <th style={{ padding: "10px 14px", textAlign: "left", color: "#fff", fontWeight: 600, fontSize: 11, width: "25%" }}></th>
             <th style={{ padding: "10px 14px", textAlign: "left", color: C.teal, fontWeight: 700, fontSize: 11, letterSpacing: 0.5, textTransform: "uppercase" }}>Statistical Model</th>
             <th style={{ padding: "10px 14px", textAlign: "left", color: C.violet, fontWeight: 700, fontSize: 11, letterSpacing: 0.5, textTransform: "uppercase" }}>Physical / Simulation</th>
@@ -116,9 +116,9 @@ function RepoCard({ name, url, description, tags, color }) {
         onMouseEnter={(e) => { e.currentTarget.style.borderColor = color; e.currentTarget.style.boxShadow = `0 4px 16px ${color}20`; }}
         onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.boxShadow = "none"; }}
       >
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", padding: "16px 20px", borderBottom: `3px solid ${color}` }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", padding: "16px 20px", borderBottom: `3px solid ${color}` }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="#8494a7"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#998d7e"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             <span style={{ fontFamily: "'IBM Plex Mono'", fontSize: 12, color: "#94a3b8" }}>jskromer</span>
             <span style={{ fontFamily: "'IBM Plex Mono'", fontSize: 12, color: "#64748b" }}>/</span>
           </div>
@@ -175,12 +175,12 @@ export default function SimulationExplainer({ onBack }) {
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero */}
-      <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.violet}` }}>
+      <div style={{ background: "linear-gradient(135deg, #3d3529 0%, #3d3529 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.violet}` }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#8494a7", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
+          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#998d7e", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
           <div style={{ fontSize: 10, letterSpacing: 4, color: C.violet, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Explainer</div>
           <h1 style={{ fontFamily: "'IBM Plex Sans'", fontSize: 30, fontWeight: 700, color: "#fff", margin: "10px 0 0", lineHeight: 1.25 }}>Simulation as Physical Model</h1>
-          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#8494a7", margin: "10px 0 0", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#998d7e", margin: "10px 0 0", lineHeight: 1.7 }}>
             When statistical models reach their limits, physics-based simulation picks up — and Bayesian calibration bridges the gap.
           </p>
         </div>
@@ -286,7 +286,7 @@ export default function SimulationExplainer({ onBack }) {
         </Section>
 
         {/* The Big Idea */}
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginBottom: 24 }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginBottom: 24 }}>
           <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 11, fontWeight: 700, letterSpacing: 2, color: C.violet, textTransform: "uppercase", marginBottom: 12 }}>The Big Idea</div>
           <P style={{ fontSize: 15, color: "#e2e8f0", margin: "0 0 12px" }}>
             A statistical model learns <em>what</em> the building does. A physical model encodes <em>why</em>.

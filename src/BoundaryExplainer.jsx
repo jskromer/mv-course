@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e",
   rose: "#be185d", roseDim: "#fce7f3", roseMid: "#f9a8d4",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
-  amber: "#b45309", amberDim: "#fef3c7",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
   red: "#dc2626", redDim: "#fef2f2",
-  teal: "#0d9488", violet: "#7c3aed", orange: "#ea580c",
+  teal: "#b5632e", violet: "#7c3aed", orange: "#ea580c",
 };
 
 function P({ children, style }) {
@@ -288,7 +288,7 @@ function ComparisonTable() {
     <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 8, overflow: "hidden", marginBottom: 20, fontSize: 12, fontFamily: "'IBM Plex Sans', sans-serif" }}>
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
-          <tr style={{ background: "#1a2332" }}>
+          <tr style={{ background: "#3d3529" }}>
             <th style={{ padding: "10px 14px", textAlign: "left", color: "#fff", fontSize: 11, width: "22%" }}></th>
             <th style={{ padding: "10px 14px", textAlign: "left", color: C.blue, fontSize: 11, width: "39%" }}>Whole Facility</th>
             <th style={{ padding: "10px 14px", textAlign: "left", color: C.rose, fontSize: 11, width: "39%" }}>Retrofit Isolation</th>
@@ -434,12 +434,12 @@ export default function BoundaryExplainer({ onBack }) {
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
       {/* Hero */}
-      <div style={{ background: "linear-gradient(135deg, #1a2332 0%, #2d3748 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.rose}` }}>
+      <div style={{ background: "linear-gradient(135deg, #3d3529 0%, #3d3529 100%)", padding: "48px 32px 40px", borderBottom: `3px solid ${C.rose}` }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#8494a7", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
+          {onBack && <button onClick={onBack} style={{ background: "none", border: "none", color: "#998d7e", fontSize: 12, fontFamily: "'IBM Plex Sans'", cursor: "pointer", marginBottom: 16, padding: 0 }}>← Back to course</button>}
           <div style={{ fontSize: 10, letterSpacing: 4, color: C.rose, fontWeight: 600, textTransform: "uppercase", fontFamily: "'IBM Plex Mono'" }}>Counterfactual Design · Dimension 1</div>
           <h1 style={{ fontFamily: "'IBM Plex Sans'", fontSize: 30, fontWeight: 700, color: "#fff", margin: "10px 0 0", lineHeight: 1.25 }}>The Measurement Boundary</h1>
-          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#8494a7", margin: "10px 0 0", lineHeight: 1.7 }}>
+          <p style={{ fontFamily: "'IBM Plex Sans'", fontSize: 15, color: "#998d7e", margin: "10px 0 0", lineHeight: 1.7 }}>
             Where you draw the line determines what the model can tell you — and what it hides.
           </p>
         </div>
@@ -555,7 +555,7 @@ export default function BoundaryExplainer({ onBack }) {
         </div>
 
         {/* The Big Idea */}
-        <div style={{ background: "linear-gradient(135deg, #1a2332, #2d3748)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginTop: 32 }}>
+        <div style={{ background: "linear-gradient(135deg, #3d3529, #3d3529)", borderRadius: 8, padding: "28px 28px", color: "#fff", marginTop: 32 }}>
           <div style={{ fontFamily: "'IBM Plex Sans'", fontSize: 11, fontWeight: 700, letterSpacing: 2, color: C.rose, textTransform: "uppercase", marginBottom: 12 }}>The Big Idea</div>
           <P style={{ fontSize: 15, color: "#e2e8f0", margin: "0 0 12px" }}>
             <strong style={{ color: "#fff" }}>The measurement boundary is not a technical detail — it's a decision about what counts.</strong> Draw it wide and you see everything, including noise you'll need to account for. Draw it tight and you get clarity, but you're blind to the ripple effects. There is no "correct" boundary — only a boundary that's appropriate for the question you're trying to answer.

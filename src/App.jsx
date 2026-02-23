@@ -30,13 +30,13 @@ function useHashRouter() {
 }
 
 const C = {
-  bg: "#f8f9fb", surface: "#ffffff", surfaceRaised: "#f0f2f5",
-  border: "#d8dde6", borderHover: "#b0b8c8",
-  text: "#1a2332", textSoft: "#4a5568", textDim: "#8494a7", white: "#111827",
-  blue: "#2563eb", blueDim: "#dbeafe",
+  bg: "#f5f0e8", surface: "#ffffff", surfaceRaised: "#ebe5d9",
+  border: "#d4cbbf", borderHover: "#b5a99a",
+  text: "#3d3529", textSoft: "#6b5f52", textDim: "#998d7e", white: "#1a1612",
+  blue: "#2c6fad", blueDim: "rgba(44,111,173,0.08)",
   green: "#16a34a", greenDim: "#dcfce7",
-  amber: "#b45309", amberDim: "#fef3c7",
-  orange: "#ea580c", teal: "#0d9488",
+  amber: "#a67c28", amberDim: "rgba(166,124,40,0.08)",
+  orange: "#ea580c", teal: "#b5632e",
 };
 
 export default function App() {
