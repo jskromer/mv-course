@@ -189,6 +189,24 @@ function Landing({ onNavigate }) {
               <div style={{ fontSize: 12, color: C.textSoft, marginTop: 4 }}>Same data, different inference — posterior distributions instead of point estimates</div>
             </div>
           </a>
+          <a href="https://mv-classmap.vercel.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 8, padding: "20px 24px", cursor: "pointer", transition: "border-color 0.2s", height: "100%" }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = C.green}
+              onMouseLeave={e => e.currentTarget.style.borderColor = C.border}>
+              <div style={{ fontSize: 10, color: C.green, fontWeight: 600, letterSpacing: 2, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>Progress Tracker</div>
+              <div style={{ fontSize: 15, fontWeight: 600, color: C.white }}>Learning Path</div>
+              <div style={{ fontSize: 12, color: C.textSoft, marginTop: 4 }}>Track your progress across all modules — six phases, twenty-two steps</div>
+            </div>
+          </a>
+          <a href="https://cmvp-capstone.vercel.app" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+            <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 8, padding: "20px 24px", cursor: "pointer", transition: "border-color 0.2s", height: "100%" }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = C.rose}
+              onMouseLeave={e => e.currentTarget.style.borderColor = C.border}>
+              <div style={{ fontSize: 10, color: C.rose, fontWeight: 600, letterSpacing: 2, fontFamily: "'IBM Plex Mono', monospace", marginBottom: 4 }}>Capstone</div>
+              <div style={{ fontSize: 15, fontWeight: 600, color: C.white }}>CMVP Capstone</div>
+              <div style={{ fontSize: 12, color: C.textSoft, marginTop: 4 }}>Full M&V plan exercise with EnergyPlus simulation data — 62,000 sq ft government facility</div>
+            </div>
+          </a>
         </div>
 
         {/* Terminology note */}
